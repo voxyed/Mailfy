@@ -36,10 +36,11 @@ class ContactListWindow:
         # МИКРОБЛОГ (топорный стиль 2000-х)
         tk.Label(top_frame, text="Микроблог:", font=("Tahoma", 7), bg="#E1F0FF").place(x=10, y=55)
         self.blog_entry = tk.Entry(top_frame, font=("Tahoma", 8), bd=1)
-        self.blog_entry.insert(0, "шел 3 день как я ебу мснджр")
+        self.blog_entry.insert(0, "фетешистский микроблог")
         self.blog_entry.place(x=10, y=72, width=250)
+        # поменял для редакта в новой версии
 
-        # --- Список контактов ---
+        # список homies
         # Настройка стиля для Treeview, чтобы убрать лишние рамки
         style = ttk.Style()
         style.configure("Treeview", font=("Tahoma", 9), rowheight=25)
@@ -74,4 +75,5 @@ class ContactListWindow:
         contact_name = self.tree.item(item, "text")
 
         if contact_name != "Друзья":
+
             self.on_chat_open_callback(contact_name)
